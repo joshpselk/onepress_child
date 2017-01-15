@@ -9,6 +9,12 @@ function my_theme_enqueue_styles() {
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
+
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+//adds options page to site
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
 ?>
