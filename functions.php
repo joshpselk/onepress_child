@@ -17,4 +17,15 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
+
+function add_process_image() {
+	$image = get_field( 'cap_process', 'options' );
+
+	if( !empty( $image ) ) { ?>
+		<div class='process_image'>
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		<div>
+	<?php }
+}
+add_action( 'onepress_before_section_features', 'add_process_image' )
 ?>
