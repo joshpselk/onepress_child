@@ -8,3 +8,26 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  onepress-child
 */
+
+section#features div.section-content div.feature-item {
+	background-color: #002d4b;
+	padding:0;
+}
+
+@media screen and (max-width: 1200px) {
+	.process_image img {
+		width:100%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.process_image {
+		background-color: #002d4b;
+	}
+
+	.process_image img {
+		width:auto;
+		margin: 0 auto 0 auto;
+    	display: block;
+	}
+}
