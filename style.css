@@ -9,9 +9,39 @@
  Text Domain:  onepress-child
 */
 
+body {
+	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
+}
+
 section#features div.section-content div.feature-item {
-	background-color: #002d4b;
+	background-color: #ffb91e;
 	padding:0;
+}
+
+section#features div.section-content div.feature-item .feature-media,
+section#features div.section-content div.feature-item .feature-item-content {
+	display:none;
+}
+
+section#features div.section-content div.feature-item h4 {
+	margin:0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: block;
+}
+
+section#features div.section-content div.feature-item h4:hover {
+	background-color:red;
+}
+
+section#features div.section-content div.feature-item h4 a {
+	color: #002d4b;
+	display:block;
+}
+
+section#features div.section-content div.feature-item h4 a:hover {
+	text-decoration: none;
+
 }
 
 @media screen and (max-width: 1200px) {
