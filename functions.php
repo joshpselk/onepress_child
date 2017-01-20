@@ -23,8 +23,10 @@ function add_process_image() {
 
 	if( !empty( $image ) ) { ?>
 		<div class='process_image'>
-			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-		<div>
+			<a href="<?php $link = the_field('ad_link', 'options'); if( !empty( $link ) ){ echo $link; } ?>">
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			</a>
+		</div>
 	<?php }
 }
 add_action( 'onepress_before_section_features', 'add_process_image' )
